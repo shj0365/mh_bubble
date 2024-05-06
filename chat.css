@@ -18,7 +18,7 @@ body{
 .nickname {
     background-color: #ffffff;
     color: #000000;
-    padding: 10px;
+    padding: 15px;
     padding-bottom: 5px;
     border-bottom-right-radius: 1rem;
     border-bottom-left-radius: 1rem;
@@ -34,7 +34,7 @@ body{
 .nickname2 {
     text-align: center;
     font-weight: 700;
-    font-size: small;
+    font-size: x-small;
     position: sticky;
 }
 
@@ -127,9 +127,9 @@ main{
     border-bottom-right-radius: 0.7rem;
     border-bottom-left-radius: 0.7rem;
     background-color: rgb(255, 255, 255);
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     color: black;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .chat-col > .balloon2{
@@ -141,7 +141,7 @@ main{
     border-bottom-right-radius: 0.7rem;
     border-bottom-left-radius: 0.7rem;
     background-color: #f1f1f1;
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     color: black;
     font-weight: 500;
 }
