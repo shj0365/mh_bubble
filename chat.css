@@ -1,0 +1,221 @@
+body{
+    margin: 0;
+}
+
+#chat-body{
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: minmax(3.125rem, auto) 6.25rem;
+    grid-template-rows: 2.5rem 2.5rem auto;
+    align-items: stretch;
+    grid-template-areas:
+        " header   setting  "
+        " header  main_menu "
+        "  main     main    ";
+}
+
+.nickname {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10px;
+    padding-bottom: 5px;
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    text-align: center;
+    font-weight: 700;
+    font-size: large;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 2.0px 2.0px 2.0px #dbdbdb;
+}
+
+.nickname2 {
+    text-align: center;
+    font-weight: 700;
+    font-size: small;
+    position: sticky;
+}
+
+/* 헤더 */
+header{
+    grid-area: header;
+    padding-top: 0.9375rem;
+    padding-bottom: 0.9375rem;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 0.625rem;
+}
+.profile-col{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+/* 프로필 사진 */
+
+.profile-img{
+
+    width: 2.5rem;
+    margin-top: 0.625rem;
+    margin-right: 0.625rem;
+}
+
+/* 프로필 사진 빈공간 */
+
+.not-profile-img{
+    width: 2.5rem;
+    height: 0.001rem;
+    margin-top: 0.625rem;
+    margin-right: 0.625rem;
+}
+
+
+/* 채팅 왼쪽 프로필명 */
+
+.profile-name{
+    font-size: 0.8125rem;
+    margin-top: 0.4rem;
+    margin-bottom: 0.2125rem;
+    font-weight: 500;
+    
+}
+
+/* main(채팅내용) 스타일 지정 */
+main{
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.chat-content{
+    margin-left: 0.625rem;
+    margin-right: 0.625rem;
+}
+
+/* 말풍선 공통 스타일 지정 */
+.chat-col{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* 친구의 채팅 말풍선들 flex 레이아웃 구성 */
+.chat{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    margin-top: 0.3125rem;
+    margin-bottom: 0.3125rem;
+}
+.chat > .profile-img{
+    align-self: flex-start;
+}
+.chat-col > .balloon{
+    margin-top: 0.3125rem;
+    padding: 0.7rem;
+    border: 1px solid rgb(255, 255, 255);
+    /*border-radius: 0.5rem;*/
+    border-top-right-radius: 0.7rem;
+    border-bottom-right-radius: 0.7rem;
+    border-bottom-left-radius: 0.7rem;
+    background-color: rgb(255, 255, 255);
+    font-size: 0.9rem;
+    color: black;
+    font-weight: 500;
+}
+
+.chat-col > .balloon2{
+    margin-top: 0.3125rem;
+    padding: 0.7rem;
+    border: 1px solid #f1f1f1;
+    /*border-radius: 0.5rem;*/
+    border-top-right-radius: 0.7rem;
+    border-bottom-right-radius: 0.7rem;
+    border-bottom-left-radius: 0.7rem;
+    background-color: #f1f1f1;
+    font-size: 0.9rem;
+    color: black;
+    font-weight: 500;
+}
+
+.chat-col > .balloon3{
+    margin-top: 0.3125rem;
+    padding: 0.1rem;
+    border: 1px solid #f1f1f1;
+    /*border-radius: 0rem;*/
+    background-color: #f1f1f1;
+    font-size: 4rem;
+    color: black;
+    font-weight: 500;
+}
+.balloon4{
+    border-top-right-radius: 0.7rem;
+    border-bottom-right-radius: 1.3rem;
+    border-bottom-left-radius: 1.3rem;
+    overflow: hidden;
+}
+
+/* 채팅 말풍선의 시간(time) 아래로 정렬 (flex item들) */
+.main-chat time{
+    align-self: flex-end;
+    flex-basis: 3.75rem;
+    flex-shrink: 0;
+    margin-left: 0.1125rem;
+    margin-right: 0.1125rem;
+    margin-bottom: 0.2rem;
+    padding-left: 0.3rem;
+    font-size: 0.7rem;
+    color: #ae9c9f;
+    text-align: left;
+}
+.chat > time{
+    margin-right: 0.5rem;
+}
+
+/* 날짜선(date-line) 스타일 지정 */
+.date-line{
+    /* flex 사용 */
+    display: flex;
+    margin-top: 15px;
+    flex-basis: 100%;
+    align-items: center;
+    color: #bebebe;;
+    font-size: 0.05rem;   
+}
+.date-line::before, .date-line::after{
+    content: "";
+    flex-grow: 1;
+    height: 1px;
+    background-color: rgba(177, 177, 177, 0.3);
+    font-size: 0px;
+    line-height: 0px;
+}
+
+.date-line2{
+    /* flex 사용 */
+    display: flex;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    flex-basis: 100%;
+    align-items: center;
+    color: #787878;
+    font-size: 0.775rem;   
+}
+.date-line2::before, .date-line2::after{
+    content: "";
+    flex-grow: 1;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0);
+    font-size: 1px;
+    line-height: 0px;
+}
+
+

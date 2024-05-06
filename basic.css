@@ -1,0 +1,14 @@
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #f1f1f1;
+}
+*{
+    box-sizing: border-box;
+}
+
+/* 음성 메세지 글씨 설정, 스피커 아이콘 유니코드 : &#x1F50A */
+a:visited, a:link{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    vertical-align:middle;
+}
